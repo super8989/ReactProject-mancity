@@ -10,7 +10,7 @@ export const Tag = props => {
         color: props.color,
         padding: "5px 10px",
         display: "inline-block",
-        fontFamily: "Righteous",
+        fontFamily: "Righteous"
       }}
     >
       {props.children}
@@ -22,4 +22,25 @@ export const Tag = props => {
   } else {
     return template;
   }
+};
+
+export const firebaseLooper = snapshot => {
+  let data = [];
+  snapshot.forEach(childSnapshot => {
+    data.push({
+      ...childSnapshot.val(),
+      id: childSnapshot.key
+    });
+  });
+
+  return data;
+};
+
+export const reverseArray = actualArray => {
+  let reversedArray = [];
+
+  for (let i = actualArray.length - 1; i >= 0; i--) {
+    reversedArray.push(actualArray[i]);
+  }
+  return reversedArray;
 };
