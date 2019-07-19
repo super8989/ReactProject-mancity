@@ -122,7 +122,6 @@ class Enroll extends Component {
                 id={'email'}
                 formdata={this.state.formdata.email}
                 change={(element)=> this.updateForm(element)}
-
               />
 
               { this.state.formError ?
