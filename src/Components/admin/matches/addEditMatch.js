@@ -8,6 +8,7 @@ import { firebaseTeams, firebaseDB, firebaseMatches } from "../../../firebase";
 import { firebaseLooper } from "../../ui/misc";
 
 class AddEditMatch extends Component {
+  
   state = {
     matchId: "",
     formType: "",
